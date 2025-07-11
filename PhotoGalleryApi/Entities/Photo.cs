@@ -9,6 +9,8 @@ namespace PhotoGalleryApi.Entities
         public string Url { get; set; } = null!;
         public string? Description { get; set; }
         public DateTime UploadedAt { get; set; }
+        public int UserId { get; set; }
+
     }
 
 }

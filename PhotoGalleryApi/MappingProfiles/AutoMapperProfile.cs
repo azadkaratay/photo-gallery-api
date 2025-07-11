@@ -8,12 +8,15 @@ namespace PhotoGalleryApi.MappingProfiles
     {
         public AutoMapperProfile()
         {
+            // Photo Mapping
             CreateMap<Photo, PhotoResponseDto>();
             CreateMap<PhotoCreateDto, Photo>();
             CreateMap<PhotoResponseDto, Photo>();
             CreateMap<PhotoUpdateDto, Photo>()
-    .ForAllMembers(opts => opts.Condition((src, dest, srcMember) => srcMember != null));
+                .ForAllMembers(opts => opts.Condition((src, dest, srcMember) => srcMember != null));
 
+            // User Mapping
+            CreateMap<User, UserResponseDto>();
         }
     }
 }
